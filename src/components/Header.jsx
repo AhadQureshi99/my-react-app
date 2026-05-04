@@ -71,7 +71,7 @@ const Header = () => {
 
   return (
     <header
-      className="w-full py-6 flex justify-center fixed top-0 left-0 z-50"
+      className="w-full py-6 flex justify-center sticky top-0 left-0 z-50 bg-white md:bg-transparent"
       style={{ perspective: "1000px" }}
     >
       <motion.div

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { FaArrowRight } from "react-icons/fa";
 
@@ -12,6 +13,7 @@ const ServicesSection = () => {
       bgColor: "bg-[#27ca93]",
       icon: "📊",
       features: ["Investor-Ready", "Visual Storytelling", "Data Visualization"],
+      path: "/services/pitch-deck",
     },
     {
       id: 2,
@@ -21,6 +23,7 @@ const ServicesSection = () => {
       bgColor: "bg-[#16acbc]",
       icon: "🎨",
       features: ["User Research", "Wireframing", "Prototyping"],
+      path: "/services/ui-ux",
     },
     {
       id: 3,
@@ -30,6 +33,7 @@ const ServicesSection = () => {
       bgColor: "bg-[#0d9ad8]",
       icon: "💻",
       features: ["React/Next.js", "Mobile Apps", "API Integration"],
+      path: "/services/mobile-app",
     },
     {
       id: 4,
@@ -39,6 +43,7 @@ const ServicesSection = () => {
       bgColor: "bg-[#058af4]",
       icon: "✨",
       features: ["Brand Strategy", "Social Media", "Video Production"],
+      path: "/services/branding",
     },
   ];
 
@@ -98,8 +103,8 @@ const ServicesSection = () => {
           className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8"
         >
           {services.map((service) => (
+            <Link key={service.id} to={service.path}>
             <motion.div
-              key={service.id}
               variants={cardVariants}
               whileHover={{ y: -12, transition: { duration: 0.3 } }}
               className={`group relative ${service.bgColor} rounded-3xl overflow-hidden cursor-pointer`}
@@ -152,6 +157,7 @@ const ServicesSection = () => {
               {/* Bottom Gradient Line */}
               <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-white/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </motion.div>
+            </Link>
           ))}
         </motion.div>
       </div>
