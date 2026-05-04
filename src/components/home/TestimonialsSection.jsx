@@ -7,46 +7,25 @@ const TestimonialsSection = () => {
       id: 1,
       quote:
         "Growhm transformed our pitch deck into a powerful storytelling tool that helped us secure $1M in funding. Their attention to detail and strategic approach made all the difference.",
-      name: "John Doe",
-      position: "CEO TechNova",
-      image:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop",
+      name: "Nnaemeka Mezue",
+      position: "Union Atlantic All Stars",
+      image: "/satisfiedcustomer1.jpeg",
     },
     {
       id: 2,
       quote:
         "Working with Growhm was a game-changer for our startup. They delivered a brand identity that perfectly captures our vision and resonates with our target audience.",
-      name: "Sarah Chen",
-      position: "Founder, StartUp Labs",
-      image:
-        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop",
+      name: "Renee Ontchangalt",
+      position: "Miss Pravala",
+      image: "/satisfiedcustomer2.jpeg",
     },
     {
       id: 3,
       quote:
         "The team at Growhm exceeded our expectations. Their creative approach and professional execution helped us stand out in a crowded market.",
-      name: "Michael Roberts",
-      position: "CMO, Global Brands",
-      image:
-        "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop",
-    },
-    {
-      id: 4,
-      quote:
-        "Growhm's branding work transformed our company image completely. We've seen a 40% increase in customer engagement since the rebrand.",
-      name: "Emily Watson",
-      position: "Director, InnovateCo",
-      image:
-        "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop",
-    },
-    {
-      id: 5,
-      quote:
-        "Professional, creative, and incredibly responsive. Growhm delivered our website redesign ahead of schedule and the results speak for themselves.",
-      name: "David Kim",
-      position: "CEO, FutureTech",
-      image:
-        "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop",
+      name: "Dr. Richard",
+      position: "",
+      image: "/satisfiedcustomer3.jpeg",
     },
   ];
 
