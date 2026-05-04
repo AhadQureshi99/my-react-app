@@ -1,8 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FaArrowRight } from "react-icons/fa";
+import { PopupModal } from "react-calendly";
+import { useCalendly } from "../../hooks/useCalendly";
 
 const ServicesHeroSection = () => {
+  const { isCalendlyOpen, openCalendly, closeCalendly, CALENDLY_URL } = useCalendly();
   return (
     <section className="pt-32 pb-20 bg-white">
       <div className="container mx-auto px-4">
@@ -65,7 +68,7 @@ const ServicesHeroSection = () => {
                   <br />
                   Brand's Next Big Win
                 </h2>
-                <button className="group inline-flex items-center gap-3 px-6 py-3 bg-white text-gray-900 rounded-full font-medium hover:bg-gray-100 transition-all duration-300">
+                <button onClick={openCalendly} className="group inline-flex items-center gap-3 px-6 py-3 bg-white text-gray-900 rounded-full font-medium hover:bg-gray-100 transition-all duration-300">
                   Book a Call
                   <span className="w-8 h-8 bg-gray-900 rounded-full flex items-center justify-center group-hover:bg-gray-800 transition-colors">
                     <FaArrowRight className="text-white text-sm -rotate-45" />
@@ -76,6 +79,14 @@ const ServicesHeroSection = () => {
           </motion.div>
         </div>
       </div>
+
+      {/* Calendly Popup Modal */}
+      <PopupModal
+        url={CALENDLY_URL}
+        onModalClose={closeCalendly}
+        open={isCalendlyOpen}
+        rootElement={document.getElementById("root")}
+      />
     </section>
   );
 };

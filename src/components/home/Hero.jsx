@@ -1,8 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FaArrowRight } from "react-icons/fa";
+import { PopupModal } from "react-calendly";
+import { useCalendly } from "../../hooks/useCalendly";
 
 const Hero = () => {
+  const { isCalendlyOpen, openCalendly, closeCalendly, CALENDLY_URL } = useCalendly();
   const heading1 = "Growth Happens";
   const heading2 = "when idea became action";
 
@@ -83,7 +86,7 @@ const Hero = () => {
             className="flex flex-col sm:flex-row items-center justify-center gap-8"
           >
             {/* Book a Call Button */}
-            <button className="px-8 py-3 bg-gray-900 text-white rounded-full font-semibold text-sm hover:bg-gray-800 transition-all flex items-center gap-3 border border-gray-200 shadow-md">
+            <button onClick={openCalendly} className="px-8 py-3 bg-gray-900 text-white rounded-full font-semibold text-sm hover:bg-gray-800 transition-all flex items-center gap-3 border border-gray-200 shadow-md">
               Book a Call
               <FaArrowRight size={14} />
             </button>
@@ -126,6 +129,14 @@ const Hero = () => {
           </motion.div>
         </motion.div>
       </div>
+
+      {/* Calendly Popup Modal */}
+      <PopupModal
+        url={CALENDLY_URL}
+        onModalClose={closeCalendly}
+        open={isCalendlyOpen}
+        rootElement={document.getElementById("root")}
+      />
     </section>
   );
 };

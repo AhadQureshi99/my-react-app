@@ -43,7 +43,7 @@ const Home = () => {
       <TestimonialsSection />
 
       {/* Blog Section Component */}
-      <BlogSection />
+      {/* <BlogSection /> */}
     </div>
   );
 };

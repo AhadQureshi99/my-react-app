@@ -10,30 +10,13 @@ const WhoWeAre = () => {
           Who we are
         </h2>
 
-        {/* Team Image Container */}
-        <div className="flex items-center justify-center">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="w-full max-w-4xl"
-          >
-            <img
-              src="/Team.png"
-              alt="Team"
-              className="w-full h-auto rounded-lg shadow-lg"
-            />
-          </motion.div>
-        </div>
-
         {/* Description */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="max-w-3xl mx-auto mt-12 text-center"
+          className="max-w-3xl mx-auto mb-12 text-center"
         >
           <p className="text-gray-600 text-lg leading-relaxed mb-4">
             Growhm Tech is a design and development agency built for startups and growing businesses that need products that perform, not just impress.
@@ -48,6 +31,23 @@ const WhoWeAre = () => {
             Turning ideas into action and action into growth.
           </p>
         </motion.div>
+
+        {/* Team Image Container */}
+        <div className="flex items-center justify-center">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="w-full max-w-4xl"
+          >
+            <img
+              src="/Team.png"
+              alt="Team"
+              className="w-full h-auto rounded-lg"
+            />
+          </motion.div>
+        </div>
       </div>
     </section>
   );

@@ -1,8 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FaPhoneAlt } from "react-icons/fa";
+import { PopupModal } from "react-calendly";
+import { useCalendly } from "../../hooks/useCalendly";
 
 const MobileAppHeroSection = () => {
+  const { isCalendlyOpen, openCalendly, closeCalendly, CALENDLY_URL } = useCalendly();
   return (
     <section
       className="relative min-h-[380px] rounded-[40px] mx-4 mt-24 mb-8 overflow-hidden"
@@ -31,6 +34,7 @@ const MobileAppHeroSection = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
+              onClick={openCalendly}
               className="group inline-flex items-center gap-3 px-8 py-4 bg-gray-900 text-white rounded-full font-semibold hover:bg-gray-800 transition-all duration-300 shadow-lg"
             >
               Book a Call
@@ -116,6 +120,14 @@ const MobileAppHeroSection = () => {
           </motion.div>
         </div>
       </div>
+
+      {/* Calendly Popup Modal */}
+      <PopupModal
+        url={CALENDLY_URL}
+        onModalClose={closeCalendly}
+        open={isCalendlyOpen}
+        rootElement={document.getElementById("root")}
+      />
     </section>
   );
 };

@@ -1,8 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FaArrowRight } from "react-icons/fa";
+import { PopupModal } from "react-calendly";
+import { useCalendly } from "../../hooks/useCalendly";
 
 const CTASection = () => {
+  const { isCalendlyOpen, openCalendly, closeCalendly, CALENDLY_URL } = useCalendly();
   const fadeInUp = {
     hidden: { opacity: 0, y: 30 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
@@ -46,7 +49,7 @@ const CTASection = () => {
               pitch deck, or full branding package—and start turning visitors
               into customers today.
             </p>
-            <button className="group inline-flex items-center gap-3 px-6 py-3 bg-white text-gray-900 rounded-full font-medium hover:bg-gray-100 transition-all duration-300">
+            <button onClick={openCalendly} className="group inline-flex items-center gap-3 px-6 py-3 bg-white text-gray-900 rounded-full font-medium hover:bg-gray-100 transition-all duration-300">
               Book a Call
               <span className="w-8 h-8 bg-gray-900 rounded-full flex items-center justify-center group-hover:bg-gray-800 transition-colors">
                 <FaArrowRight className="text-white text-sm -rotate-45" />
@@ -55,6 +58,14 @@ const CTASection = () => {
           </div>
         </motion.div>
       </div>
+
+      {/* Calendly Popup Modal */}
+      <PopupModal
+        url={CALENDLY_URL}
+        onModalClose={closeCalendly}
+        open={isCalendlyOpen}
+        rootElement={document.getElementById("root")}
+      />
     </section>
   );
 };
