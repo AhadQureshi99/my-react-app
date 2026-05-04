@@ -22,7 +22,7 @@ const WhoWeAre = () => {
             Growhm Tech is a design and development agency built for startups and growing businesses that need products that perform, not just impress.
           </p>
           <p className="text-gray-600 text-lg leading-relaxed mb-4">
-            We specialize in UI/UX design, branding, and web development, creating solutions that drive real results — from launching products to improving conversions.
+            We specialize in UI/UX design, branding, and web development, creating solutions that drive real results  from launching products to improving conversions.
           </p>
           <p className="text-gray-600 text-lg leading-relaxed mb-4">
             Our process is fast, transparent, and collaborative, with a dedicated team focused on delivering quality and meeting your goals.

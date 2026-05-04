@@ -117,8 +117,13 @@ const Hero = () => {
                   />
                 </div>
                 <div className="w-12 h-12 rounded-full border-2 border-white bg-gradient-to-r from-cyan-500 to-purple-600 flex items-center justify-center text-white text-xs font-bold shadow-md">
-                  +
-                </div>
+                    <button
+                      onClick={() => document.getElementById("testimonials")?.scrollIntoView({ behavior: "smooth" })}
+                      className="w-full h-full flex items-center justify-center text-white text-xs font-bold"
+                    >
+                      +
+                    </button>
+                  </div>
               </div>
 
               {/* Text */}

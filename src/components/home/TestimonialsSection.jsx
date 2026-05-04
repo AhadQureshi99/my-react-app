@@ -54,7 +54,7 @@ const TestimonialsSection = () => {
   const duplicatedTestimonials = [...testimonials, ...testimonials];
 
   return (
-    <section className="py-20 md:py-28 bg-gray-50 overflow-hidden">
+    <section id="testimonials" className="py-20 md:py-28 bg-gray-50 overflow-hidden">
       <div className="container mx-auto px-4 mb-16">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
