@@ -17,7 +17,7 @@ const About = () => {
         keywords="about Growhm Tech, design team, startup agency team, who we are, design agency Pakistan"
         canonical="/about"
       />
-      {/* <AboutVideoSection /> */}}
+      {/* <AboutVideoSection /> */}
       <OfficeCultureSection />
       <TeamHeroSection />
       <TeamExpertsSection />
