@@ -1,0 +1,10 @@
+export { default as Hero } from "./Hero";
+export { default as VideoSection } from "./VideoSection";
+export { default as BrandsSlider } from "./BrandsSlider";
+export { default as WhoWeAre } from "./WhoWeAre";
+export { default as StatsSection } from "./StatsSection";
+export { default as ServicesSection } from "./ServicesSection";
+export { default as CTASection } from "./CTASection";
+export { default as TestimonialsSection } from "./TestimonialsSection";
+export { default as BlogSection } from "./BlogSection";
+export { default as ContactFormSection } from "./ContactFormSection";
