@@ -97,21 +97,21 @@ const Hero = () => {
               <div className="flex -space-x-3">
                 <div className="w-12 h-12 rounded-full border-2 border-white bg-gradient-to-r from-green-400 via-cyan-400 to-pink-400 flex items-center justify-center overflow-hidden shadow-md">
                   <img
-                    src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=60&h=60&fit=crop"
+                    src="/satisfiedcustomer1.jpeg"
                     alt="Customer 1"
                     className="w-full h-full object-cover"
                   />
                 </div>
                 <div className="w-12 h-12 rounded-full border-2 border-white bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 flex items-center justify-center overflow-hidden shadow-md">
                   <img
-                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=60&h=60&fit=crop"
+                    src="/satisfiedcustomer2.jpeg"
                     alt="Customer 2"
                     className="w-full h-full object-cover"
                   />
                 </div>
                 <div className="w-12 h-12 rounded-full border-2 border-white bg-gradient-to-r from-pink-400 via-red-400 to-orange-400 flex items-center justify-center overflow-hidden shadow-md">
                   <img
-                    src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=60&h=60&fit=crop"
+                    src="/satisfiedcustomer3.jpeg"
                     alt="Customer 3"
                     className="w-full h-full object-cover"
                   />
