@@ -30,6 +30,11 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    setIsOpen(false);
+    setIsServicesOpen(false);
+  }, [location.pathname]);
+
   const navItems = [
     { name: "About", path: "/about" },
     { name: "Cases", path: "/cases" },
@@ -168,17 +173,40 @@ const Header = () => {
           >
             {navItems.map((item) =>
               item.hasDropdown ? (
-                <button
-                  key={item.name}
-                  onClick={() => setIsServicesOpen(!isServicesOpen)}
-                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200 text-left ${
-                    isServicesOpen
-                      ? "text-cyan-600 bg-white/50"
-                      : "text-gray-700 hover:text-gray-900 hover:bg-white/30"
-                  }`}
-                >
-                  {item.name}
-                </button>
+                <div key={item.name}>
+                  <button
+                    onClick={() => setIsServicesOpen(!isServicesOpen)}
+                    className={`w-full px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200 text-left ${
+                      isServicesOpen
+                        ? "text-cyan-600 bg-white/50"
+                        : "text-gray-700 hover:text-gray-900 hover:bg-white/30"
+                    }`}
+                  >
+                    {item.name}
+                  </button>
+
+                  {isServicesOpen && (
+                    <div className="mt-2 ml-2 flex flex-col gap-2">
+                      {serviceItems.map((service) => (
+                        <Link
+                          key={service.name}
+                          to={service.path}
+                          onClick={() => {
+                            setIsOpen(false);
+                            setIsServicesOpen(false);
+                          }}
+                          className={`block px-4 py-2 rounded-lg text-sm transition-colors duration-200 ${
+                            location.pathname === service.path
+                              ? "text-cyan-600 bg-white/50"
+                              : "text-gray-700 hover:text-gray-900 hover:bg-white/30"
+                          }`}
+                        >
+                          {service.name}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
               ) : (
                 <Link
                   key={item.path}
